@@ -1,8 +1,7 @@
 import Link from 'next/link'
 import { Tag } from 'lucide-react'
 import { getAllTags, getPostsByTag } from '@/lib/posts'
-import { Badge } from '@/components/ui/badge'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
 export default function TagsPage() {
   const tags = getAllTags()

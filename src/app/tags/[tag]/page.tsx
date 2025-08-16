@@ -6,9 +6,9 @@ import { PostCard } from '@/components/post-card'
 import { Button } from '@/components/ui/button'
 
 interface TagPageProps {
-  params: {
+  params: Promise<{
     tag: string
-  }
+  }>
 }
 
 export async function generateStaticParams() {
@@ -28,7 +28,7 @@ export default async function TagPage({ params }: TagPageProps) {
     if (decodedTag.includes('%')) {
       decodedTag = decodeURIComponent(decodedTag)
     }
-  } catch (error) {
+  } catch {
     // 如果解码失败，使用原始tag
     decodedTag = tag
   }

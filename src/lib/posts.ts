@@ -58,7 +58,7 @@ export function getPostBySlug(slug: string): Post | null {
       date: data.date || '',
       tags: data.tags || [],
     }
-  } catch (error) {
+  } catch {
     return null
   }
 }
